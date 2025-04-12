@@ -7,6 +7,7 @@ router.get('/instagram', (req, res) => {
   const redirectUri = process.env.INSTAGRAM_REDIRECT_URI; // Set this in .env
   const clientId = process.env.INSTAGRAM_CLIENT_ID;
   const authUrl = `https://api.instagram.com/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user_profile&response_type=code`;
+
   res.redirect(authUrl);
 });
 
