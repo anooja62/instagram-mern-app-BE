@@ -11,7 +11,7 @@ const instagramCallback = async (req, res) => {
     try {
       const tokenData = await getInstagramAccessToken(code);
       // Redirect to frontend with token and user ID
-      const frontendUrl = `http://localhost:5173/dashboard?access_token=${tokenData.access_token}&user_id=${tokenData.user_id}`;
+      const frontendUrl = `https://instagram-mern-app-fe.vercel.app/dashboard?access_token=${tokenData.access_token}&user_id=${tokenData.user_id}`;
       res.redirect(frontendUrl);
     } catch (error) {
       console.error('OAuth error:', error);
