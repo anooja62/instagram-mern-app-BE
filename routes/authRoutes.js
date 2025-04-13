@@ -6,8 +6,8 @@ const axios = require('axios'); // Import axios to make API calls
 router.get('/instagram', (req, res) => {
   const redirectUri = process.env.INSTAGRAM_REDIRECT_URI; // Set this in .env
   const clientId = process.env.INSTAGRAM_CLIENT_ID;
-  //const authUrl = `https://api.instagram.com/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user_profile&response_type=code`;
-  const authUrl = "https://instagram-mern-app-fe.vercel.app/dashboard";
+  const authUrl = `https://api.instagram.com/oauth/authorize/?client_id=${clientId}&redirect_uri=${redirectUri}&scope=user_profile&response_type=code`;
+ // const authUrl = "https://instagram-mern-app-fe.vercel.app/dashboard";
 
   res.redirect(authUrl);
 });
